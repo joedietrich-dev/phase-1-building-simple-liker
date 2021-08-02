@@ -11,7 +11,9 @@ function handleHeartClick(e) {
     })
     .catch((err) => {
       const errorModal = document.querySelector("#modal");
+      const modalMessage = document.querySelector('#modal-message');
       errorModal.classList.remove('hidden');
+      modalMessage.innerText = err;
       setTimeout(() => errorModal.classList.add('hidden'), 3000);
     })
 }
